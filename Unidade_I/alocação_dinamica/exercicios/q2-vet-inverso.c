@@ -8,7 +8,7 @@
 saída: vetor na ordem inversa*/
 
 int main(void){
-		 int tamanho;
+	int tamanho;
     printf("informe o tamanho do vetor:\t");
     scanf("%d", &tamanho);
     int*vetor=(int*)malloc(tamanho*sizeof(int));
@@ -23,7 +23,7 @@ int main(void){
 
     printf("digitar os elementos do vetor:\t");
     for(int count=0; count<tamanho; count++){
-        scanf("%d" &vetor[count]);
+        scanf("%d", &vetor[count]);
     }
     //imprima vetor inverso
     int count;
