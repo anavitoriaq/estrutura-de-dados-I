@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 typedef struct Funcionario{
     char nome[20], cargo[20];
@@ -13,11 +14,11 @@ void preenche(Funcionario * servidor){
     scanf("%[^\n]", servidor->nome);
     getchar();
     printf("digite seu salario: \t");
-    scanf("%f", &servidor->salario);
+    scanf("%e", &servidor->salario);
     printf("digite o identificador: \t");
-    scanf("%d", &servidor->identificador);
+    scanf("%ld", &servidor->identificador);
     printf("digite o cargo: \t");
-    scanf("%[^\n]", servidor->cargo);
+    scanf("%c", &servidor->cargo);
     getchar();
 }
 
@@ -25,7 +26,7 @@ void preenche(Funcionario * servidor){
 void imprimi(Funcionario * servidor){
     printf("nome: %[^\n] ", servidor->nome);
     printf("salario: %f", servidor->salario);
-    printf("identificador: %d", servidor->identificador);
+    printf("identificador: %ld", servidor->identificador);
     printf("cargo: %[^\n]", servidor->cargo);
 }
 
@@ -33,5 +34,5 @@ void imprimi(Funcionario * servidor){
 void alterar_salario(){
     int novo_salario;
     printf("digite o novo salario: \t");
-    scanf("%f", &novo_salario);
+    scanf("%d", &novo_salario);
 }
