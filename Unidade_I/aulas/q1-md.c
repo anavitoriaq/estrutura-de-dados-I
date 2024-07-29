@@ -11,26 +11,26 @@ void preenche_vetor(int tamanho, int* vetor){
      printf("digite os elementos do vetor: \n");
      for(int count=0; count<tamanho; count++){
         scanf("%s", &vetor[count]);
-     }
+    }
 }  
 
 void imprime_inverso(int tamanho, int * vetor){
      printf("vetor inverso: \n");
      for(int count=tamanho-1; count>=0; count--){
-         printf("%d\t", vetor[count]);
-     }
+        printf("%d\t", vetor[count]);
+    }
 }
 
 int * aloca_vetor(int tamanho){
-     int * vetor = (int*) malloc(tamanho*sizeof(int));
-     if(vetor==NULL){
+    int * vetor = (int*) malloc(tamanho*sizeof(int));
+    if(vetor==NULL){
         printf("no memory");
         exit(1);
-     }
-     else{
-         printf("vetor alocado com sucesso!\n");
-     }
-     return vetor;
+    }
+    else{
+        printf("vetor alocado com sucesso!\n");
+    }
+    return vetor;
 }
 
 int main(void){
