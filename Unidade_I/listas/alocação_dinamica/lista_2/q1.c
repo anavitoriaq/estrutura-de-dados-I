@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(void){
-    int N, contador, contador1;
+    int N, count, count1;
     // armazena a quantidade e porcentagem de mulheres que gostaram do produto
     int mulheres = 0;
     int porcentagemFem = 0;
@@ -20,26 +20,26 @@ int main(void){
     char sexo[N];
     char opiniao[N];
 
-    for(contador = 0; contador < N; contador++){
-        printf("informe o sexo (%d) [m/f]: ", contador);
-        scanf(" %c", &sexo[contador]);
-        printf("gostou do produto? (%d)[s/n] ", contador);
-        scanf(" %c", &opiniao[contador]);
+    for(count = 0; count < N; count++){
+        printf("informe o sexo (%d) [m/f]: ", count + 1);
+        scanf(" %c", &sexo[count]);
+        printf("gostou do produto? (%d)[s/n] ", count + 1);
+        scanf(" %c", &opiniao[count]);
     }
     //iniciando o laço
-    for(contador1 = 0; contador1 < N; contador1++){
-        // contador para a quantidade e porcentagem de mulheres que gostaram
-        if (sexo[contador1] == 'f'){
+    for(count1 = 0; count1 < N; count1++){
+        // count para a quantidade e porcentagem de mulheres que gostaram
+        if (sexo[count1] == 'f'){
             mulheres++;
-            if (opiniao[contador1] == 's'){
+            if (opiniao[count1] == 's'){
                 porcentagemFem++;
             }
         
         }
-        // contador para a quantidade e porcentagem de homens que não gostaram
-        if (sexo[contador1] == 'm'){
+        // count para a quantidade e porcentagem de homens que não gostaram
+        if (sexo[count1] == 'm'){
             homens++;
-            if (opiniao[contador1] == 'n'){
+            if (opiniao[count1] == 'n'){
                 porcentagemMasc++;
             }
         }
