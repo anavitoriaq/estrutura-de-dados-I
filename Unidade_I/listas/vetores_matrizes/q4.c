@@ -42,7 +42,7 @@ int main(void){
         }
         printf("digite o nome completo da pessoa %d:", i + 1);
         scanf(" %[^\n]", nomes[i]);
-    }7
+    }
     
     return 0; 
 }
