@@ -10,12 +10,12 @@ saída: vetor na ordem inversa*/
 void preenche_vetor(int tamanho, int* vetor){  
      printf("digite os elementos do vetor: \n");
      for(int count=0; count<tamanho; count++){
-        scanf("&d", &vetor[count]);
+        scanf("%s", &vetor[count]);
      }
 }  
 
 void imprime_inverso(int tamanho, int * vetor){
-     printf("vetor inverso: n");
+     printf("vetor inverso: \n");
      for(int count=tamanho-1; count>=0; count--){
          printf("%d\t", vetor[count]);
      }
@@ -28,7 +28,7 @@ int * aloca_vetor(int tamanho){
         exit(1);
      }
      else{
-         printf("vetor alocado com sucesso!");
+         printf("vetor alocado com sucesso!\n");
      }
      return vetor;
 }

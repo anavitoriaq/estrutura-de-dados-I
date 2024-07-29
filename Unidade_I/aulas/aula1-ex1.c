@@ -26,11 +26,12 @@ void imprime_vetor (float * vetor, int tamanho){
     }
 }
 int main (void){
+    int tamanho = 2;
     float * vetor = cria_vetor(5);
 //chamada das funções ler e imprimir
-ler_vetor(vetor, tamanho);
-imprime_vetor(vetor, tamanho);
+    ler_vetor(vetor, tamanho);
+    imprime_vetor(vetor, tamanho);
 //libera vetor da memoria
-free (vetor);
-return 0;
+    free (vetor);
+    return 0;
 }
