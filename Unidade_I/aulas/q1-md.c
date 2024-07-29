@@ -14,7 +14,7 @@ void preenche_vetor(int tamanho, int* vetor){
      }
 }  
 
-void imprimi_inverso(int tamanho, int * vetor){
+void imprime_inverso(int tamanho, int * vetor){
      printf("vetor inverso: n");
      for(int count=tamanho-1; count>=0; count--){
          printf("%d\t", vetor[count]);
@@ -42,7 +42,7 @@ int main(void){
     //aloca vetor
     int * vetor = aloca_vetor(tamanho);
     //elementos do vetor
-    preencher_vetor(tamanho, vetor);
+    preenche_vetor(tamanho, vetor);
     //imprime vetor inverso
     imprime_inverso(tamanho, vetor);
     free(vetor);

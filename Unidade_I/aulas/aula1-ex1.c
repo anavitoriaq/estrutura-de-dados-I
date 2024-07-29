@@ -1,7 +1,7 @@
 #include <stdio.h>  // printf = scanf 
 #include <stdlib.h> // malloc, exit, free
 
-float * cria_vetor(int tamanho){
+float * cria_vetor(int tamanho ){
     //função que cria vetor de números reais
     float * vetor = (float*) malloc (tamanho*sizeof(float));
         if (vetor == NULL){
