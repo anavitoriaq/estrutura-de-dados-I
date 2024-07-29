@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 /*entrada: tamanho do vetor
-					   elementos o vetor
+elementos o vetor
 - alocar dinâmicamente vetor
 - imprimir valor inverso
 saída: vetor na ordem inversa*/

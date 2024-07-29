@@ -1,11 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-/*entrada: tamanho do vetor
- elementos do vetor
-- alocar dinâmicamente vetor
-- obter vetor inverso
-saída: vetor na ordem inversa*/
 
 int main(void){
 	int tamanho;
