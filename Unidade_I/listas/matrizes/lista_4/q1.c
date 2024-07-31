@@ -1,32 +1,42 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define MAXIMO 1000
+int main(void)
+{
+    int linhas, colunas, i, j, costas = 0;
+    scanf("%d %d", &linhas, &colunas);
 
-int main() {
-    int i = 0;
-    int L, C;
-    char mapa[MAXIMO][MAXIMO];
-    printf("Informe o tamanho do mapa: ");
-    // le o tamanho do mapa
-    scanf(" %d %d", &L, &C);
-    // le o mapa
-    for (i=0; i < L; i++) {
-        scanf(" %[^\n]", mapa[i]);
+    char **mat = (char **)malloc(linhas * sizeof(char *));
+    if (mat == NULL)
+        exit(1);
+    for (i = 0; i < linhas; i++)
+    {
+        mat[i] = (char *)malloc(colunas * sizeof(char));
+        if (mat[i] == NULL)
+            exit(1);
     }
-    int costa = 0;
-    // percorre o mapa para encontrar os quadrados que sao parte da costa
-    for (int i = 0; i < L; i++) {
-        for (int j = 0; j < C; j++) {
-            if (mapa[i][j] == '#') {
-                // vai verificar se o quadrado atual tem algum vizinho que é água ou está fora dos limites
-                if (i == 0 || mapa[i-1][j] == '.' || i == L-1 || mapa[i+1][j] == '.' ||
-                    j == 0 || mapa[i][j-1] == '.' || j == L-1 || mapa[i][j+1] == '.') {
-                    costa++;
+    for (i = 0; i < linhas; i++)
+    {
+        scanf("%s", mat[i]);
+    }
+    for (i = 0; i < linhas; i++)
+    {
+        for (j = 0; j < colunas; j++)
+        {
+            if (mat[i][j] == '#')
+            {
+                if (j == 0 || i == 0 || (i == linhas - 1 && j != 0)
+                 || (j == colunas - 1 && i != 0 && i != linhas - 1))
+                {
+                    costas ++;
+                }else if (mat[i-1][j] == '.' || mat[i+1][j] == '.' 
+                || mat[i][j+1] == '.' || mat[i][j-1] == '.')
+                {
+                    costas++;
                 }
             }
         }
     }
-    printf("%d\n", costa);
-
+    printf("%d\n", costas);
     return 0;
 }
