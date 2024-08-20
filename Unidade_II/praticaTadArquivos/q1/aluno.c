@@ -7,7 +7,7 @@ struct aluno{
     float media;
 };
 
-Aluno *criarAluno(int matricula, char nome[], float media){
+Aluno *criarAluno(int matricula, char *nome, float media){
     Aluno *aluno =(Aluno*) malloc(sizeof(Aluno));
     if(aluno == NULL){
         printf("erro ao alocar!");
@@ -19,7 +19,7 @@ Aluno *criarAluno(int matricula, char nome[], float media){
     return aluno;
 }
 
-void SalvarAlunoEmArquivo(char nome_do_arquivo[], Aluno *aluno){
+void salvarAlunoEmArquivo(char *nome_do_arquivo, Aluno *aluno){
     FILE *arq = fopen(nome_do_arquivo, "a");
     if(arq == NULL){
         printf("erro ao abrir o arquivo!\n");
@@ -28,7 +28,7 @@ void SalvarAlunoEmArquivo(char nome_do_arquivo[], Aluno *aluno){
     fprintf(arq, "%d\t%[^\t]%f\n", aluno->matricula, aluno->nome, aluno->media);
     fclose(arq);
 }
-void exibirAlunos(char *nome_do_arquivo[]){
+void exibirAlunos(char *nome_do_arquivo){
     Aluno aluno;
     int cont = 1;
     FILE *arq = fopen(nome_do_arquivo, "r");

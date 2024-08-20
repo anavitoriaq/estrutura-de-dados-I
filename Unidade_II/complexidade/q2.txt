@@ -1,0 +1,7 @@
+alg A 
+linha 2 = c1(n)
+linha 3 = c2(n^2)
+linha 4 = c3(n^2)
+
+T(n) = c1(n) + c2(n^2) + c3(n^2)
+T(n) = 

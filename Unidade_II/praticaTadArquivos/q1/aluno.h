@@ -6,9 +6,10 @@ typedef struct aluno Aluno;
 
 /*função que aloca memória para struct Aluno */
 
-Aluno *criarAluno(int matricula, char nome[], float media);
+Aluno *criarAluno(int matricula, char *nome, float media);
 
 
-void SalvarAlunoEmArquivo(char nome_do_arquivo[], Aluno *aluno);
+void salvarAlunoEmArquivo(char *nome_do_arquivo, Aluno *aluno);
 
-void exibirAlunos(char *nome_do_arquivo[]);
+void exibirAlunos(char *nome_do_arquivo);
+//* nome_do_arquivo[]
